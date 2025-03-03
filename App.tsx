@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+  TextInput,
+  ScrollView,
+  SafeAreaView
+} from "react-native";
 
 export default function App() {
+  let season = 3;
+  if (season === 4) {
+    console.log(`Mùa đông`);
+  } else if (season === 1) {
+    console.log(`Mùa xuân`);
+  } else if (season === 2) {
+    console.log(`Mùa hè`);
+  } else if (season === 3) {
+    console.log(`Mùa thu`);
+  } else {
+    console.log(`Sai định dạng tháng`);
+  }
+
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+      {/* Your JSX content here */}
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
